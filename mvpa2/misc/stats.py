@@ -147,7 +147,7 @@ class DSMatrix(object):
                         data_vectors[i, :], data_vectors[j, :])[0]
 
         elif (metric == 'pearson'):
-            dsmatrix = np.corrcoef(data_vectors)
+            dsmatrix = 1 - np.corrcoef(data_vectors)
 
         elif (metric == 'confusion'):
             #print 'Using confusion correlation metric...'
