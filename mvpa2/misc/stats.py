@@ -143,8 +143,7 @@ class DSMatrix(object):
             for i in range(num_exem):
                 # across columns
                 for j in range(num_exem):
-                    dsmatrix[i, j] = 1 - st.spearmanr(
-                        data_vectors[i, :], data_vectors[j, :])[0]
+                    dsmatrix[i, j] = 1 - st.spearmanr(data_vectors[i, :], data_vectors[j, :])[0]
 
         elif (metric == 'pearson'):
             dsmatrix = 1 - np.corrcoef(data_vectors)
