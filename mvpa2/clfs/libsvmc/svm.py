@@ -63,7 +63,7 @@ class SVM(_SVM):
                    ('binary', 'multiclass'), 'C-SVM classification'),
         'NU_SVC' : (_svm.svmc.NU_SVC, ('nu',),
                     ('binary', 'multiclass'), 'nu-SVM classification'),
-        'ONE_CLASS' : (_svm.svmc.ONE_CLASS, (),
+        'ONE_CLASS' : (_svm.svmc.ONE_CLASS, ('nu',),
                        ('oneclass',), 'one-class-SVM'),
         'EPSILON_SVR' : (_svm.svmc.EPSILON_SVR, ('C', 'tube_epsilon'),
                          ('regression',), 'epsilon-SVM regression'),
